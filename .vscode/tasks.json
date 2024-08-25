@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "source-files/bootstrap",
+			"problemMatcher": [],
+			"label": "npm: start - source-files/bootstrap",
+			"detail": "npm-run-all --parallel watch docs-serve"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "source-files/jquery",
+			"problemMatcher": [],
+			"label": "npm: start - source-files/jquery",
+			"detail": "grunt watch"
+		}
+	]
+}

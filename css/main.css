@@ -43,11 +43,11 @@
 /* ------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .media-image-1 {
-  background-image: url("file:///D:/Avid%20Animation/img/logos.png");
+  background: url("file:///D:/Avid%20Animation/img/logos.png");
 }
 
 .media-image-2 {
-  background-image: url("D:\Avid Animation\img\logos.png");
+  background-image: url("https://dummyimage.com/1920x1080/4d4d4d/636363");
 }
 
 .media-full-1 {
@@ -67,15 +67,15 @@
 }
 
 .split-slide-1 {
-  background-image: url("file:///D:/Avid%20Animation/img/logos.png");
+  background-image: url("file:///D:/Avid%20Animation/img/landingpage.mp4");
 }
 
 .split-slide-2 {
-  background-image: url("file:///D:/Avid%20Animation/img/worldbank1.png");
+  background-image: url("file:///D:/Avid%20Animation/img/landingpage.mp4");
 }
 
 .split-slide-3 {
-  background-image: url("https://dummyimage.com/960x1080/4d4d4d/636363");
+  background-image: url("file:///D:/Avid%20Animation/img/landingpage.mp4");
 }
 
 .about-image {
@@ -83,8 +83,10 @@
 }
 
 .contact-image {
-  background-image: url("file:///D:/Avid%20Animation/img/logos.png");
+  background-image: url("file:///D:/Avid%20Animation/img/contact.png");
 }
+
+
 
 /* ------------------------------------------------*/
 /* Template Backgrounds End */
@@ -236,6 +238,7 @@ img {
   background-position: center;
   -moz-background-size: cover;
        background-size: cover;
+  z-index: 1;
 }
 
 .color-layer {
@@ -371,6 +374,7 @@ img {
 /* ------------------------------------------------*/
 /* Transitions Start */
 /* ------------------------------------------------*/
+
 body .header,
 body .footer-desktop {
   opacity: 0;
@@ -1665,8 +1669,9 @@ form input.margin-l, form textarea.margin-l {
 /* ------------------------------------------------*/
 /* Animated Backgrounds Start */
 /* ------------------------------------------------*/
+
 .video-background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -1707,6 +1712,16 @@ form input.margin-l, form textarea.margin-l {
   height: 100%;
   min-height: 100%;
 }
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1; /* Ensure the video is behind your content */
+  object-fit: cover; /* Ensures the video covers the entire area */
+}
+
 
 #triangles-js {
   position: absolute;
@@ -3097,7 +3112,13 @@ form input.margin-l, form textarea.margin-l {
 }
 @media only screen and (min-width: 1200px) {
   .my-gallery__image {
-    opacity: 0;
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .my-gallery__image {
+    width: 50%;
+    height: auto;
   }
 }
 
