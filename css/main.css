@@ -2107,6 +2107,7 @@ form input.margin-l, form textarea.margin-l {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 100%;
+  z-index: 2;
 }
 @media only screen and (min-width: 1200px) {
   .headline {
